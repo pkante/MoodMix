@@ -1,19 +1,25 @@
 import React from 'react';
-import Navbar from './components/Navbar'
-import Hero from './components/Hero'
-import HowItWorks from './components/HowItWorks'
-import Newsletter from './components/Newsletter'
-import PurchasePlan from './components/PurchasePlan'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import HowItWorks from './components/HowItWorks';
+import Newsletter from './components/Newsletter';
+import PurchasePlan from './components/PurchasePlan';
+import LoginPage from './components/Login';
+import RegisterPage from './components/Register';
+import AboutPage from './components/About';
 
 function App() {
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <HowItWorks />
-      <Newsletter />
-      <PurchasePlan />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<> <Navbar /> <Hero /> <HowItWorks /> <Newsletter /> <PurchasePlan /> </>} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        <Route path="/about" element={<AboutPage />} />
+      </Routes>
+      {/* <Navbar /> */}
+    </Router>
   );
 }
 
