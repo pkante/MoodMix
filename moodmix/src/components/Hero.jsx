@@ -1,5 +1,6 @@
 import React from 'react';
 import Typed from 'react-typed';
+import { Link } from 'react-router-dom';
 
 const Hero = () => {
   return (
@@ -18,8 +19,8 @@ const Hero = () => {
                 backSpeed={70} 
                 loop/>
             </div>
-            <p className='md:text-2xl text-xl font-bold text-gray-500'>Powered by ChatGPT, Spotify, and Computer Vision Technology. MoodMix revolutionizes how music is heard</p>
-            <button className='bg-[#00fd9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-white'>Get Started Now</button>
+            <p className='md:text-2xl text-xl font-bold text-gray-500'>Powered by ChatGPT, Spotify, and Computer Vision. MoodMix revolutionizes how music is heard</p>
+            <Link to="/chat"><button className='bg-[#00fd9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3 text-white'>Get Started Now</button></Link>
 
         </div>
     </div>
