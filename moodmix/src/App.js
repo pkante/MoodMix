@@ -10,7 +10,7 @@ import LoginPage from './components/Login';
 import RegisterPage from './components/Register';
 import AboutPage from './components/About';
 
-function App() {
+function App() { 
   return (
     <Router>
       <Routes>
